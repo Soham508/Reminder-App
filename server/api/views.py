@@ -9,7 +9,6 @@ from .models import User, Reminder
 
 
 class ReminderListCreateAPIView(APIView):
-    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         reminders = Reminder.objects.filter(user=request.user)
